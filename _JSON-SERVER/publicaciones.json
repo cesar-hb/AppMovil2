@@ -71,6 +71,14 @@
       "apellido": "Torres",
       "titulo": "Trabajando duro",
       "contenido": "He estado puro trabajando para mis alumnos, ojalá me evalúen bien."
+    },
+    {
+      "id": 11,
+      "correo": "desarrollador@duocuc.cl",
+      "nombre": "Juan",
+      "apellido": "Perez",
+      "titulo": "¡Gracias profe!",
+      "contenido": "Ha sido muy interesante la asignatura de aplicaciones móviles, gracias al profe Cristián por todo su buen trabajo y dedicación"
     }
   ]
 }
