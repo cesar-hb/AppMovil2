@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { IonicModule } from '@ionic/angular';
+import { AnimationController, IonicModule } from '@ionic/angular';
 import { QrComponent } from 'src/app/components/qr/qr.component';
 import { MiclaseComponent } from 'src/app/components/miclase/miclase.component';
 import { ForoComponent } from 'src/app/components/foro/foro.component';
@@ -18,14 +18,17 @@ import { ApiClientService } from 'src/app/services/api-client.service';
   imports: [IonicModule, CommonModule, FormsModule,
   QrComponent, MiclaseComponent, ForoComponent, MisdatosComponent]
 })
-export class InicioPage implements OnInit {
+export class InicioPage implements OnInit, AfterViewInit {
 
+  @ViewChild('titulo', { read: ElementRef }) itemParrafo!: ElementRef;
   componente_actual = 'qr';
 
   constructor(
     private authService: AuthService, 
     private bd: DataBaseService,
+    private animationController: AnimationController,
     private api: ApiClientService) { }
+    
 
   ngOnInit() {
     this.authService.primerInicioSesion.subscribe(esPrimerInicioSesion => {
@@ -44,4 +47,16 @@ export class InicioPage implements OnInit {
     this.authService.logout();
   }
 
+  public ngAfterViewInit(): void {
+    if (this.itemParrafo) {
+      const animation = this.animationController
+        .create()
+        .addElement(this.itemParrafo.nativeElement)
+        .iterations(Infinity)
+        .duration(1500)
+        .direction('alternate')
+        .fromTo('background', 'black', 'var(--background)');
+      animation.play();
+    }
+  }
 }

@@ -1,9 +1,16 @@
-<ion-header [translucent]="true">
+  <ion-header>
+    <ion-toolbar id=toolbar>
+      <ion-title #titulo>
+        <div>
+          <img id=logo src="/assets/duoc-logo-s.png" alt="image">
+          <p id=parrafo>Sistema de asistencia DUOC</p>
+        </div>
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+
   <ion-toolbar>
-    <ion-title>Asistencia DUOC - Inicio</ion-title>
-  </ion-toolbar>
-  <ion-toolbar>
-    <ion-segment [(ngModel)]="componente_actual"  (ngModelChange)="cambiarComponente($event)">
+    <ion-segment [(ngModel)]="componente_actual" (ngModelChange)="cambiarComponente($event)">
       
       <ion-segment-button value="qr">
         <ion-label>QR</ion-label>
@@ -23,23 +30,17 @@
 
     </ion-segment>
   </ion-toolbar>
-</ion-header>
 
 <ion-content>
-
   <app-qr [hidden]="componente_actual !== 'qr'" (qrCapturado)="cambiarComponente('miclase')"></app-qr>
-
   <app-miclase [hidden]="componente_actual !== 'miclase'"></app-miclase>
-
   <app-foro [hidden]="componente_actual !== 'foro'"></app-foro>
-
   <app-misdatos [hidden]="componente_actual !== 'misdatos'"></app-misdatos>
-  
 </ion-content>
 
 <ion-footer>
   <ion-toolbar>
-    <ion-button (click)="cerrarSesion()" expand="block" fill="clear" shape="round">
+    <ion-button (click)="cerrarSesion()" fill="clear" shape="round">
       Cerrar sesión
     </ion-button>
   </ion-toolbar>
