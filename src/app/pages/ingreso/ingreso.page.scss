@@ -1,40 +1,40 @@
 ion-content{
-    --padding-top: 20px;
-    --padding-bottom: 20px;
-    --padding-end: 20px;
-    --padding-start: 20px;
-  }
+  --padding-top: 20px;
+  --padding-bottom: 20px;
+  --padding-end: 20px;
+  --padding-start: 20px;
+}
 
 ion-header {
-    --padding-top: 20px;
-    --padding-bottom: 20px;
-    --padding-end: 20px;
-    --padding-start: 20px;
-  }
+  --padding-top: 20px;
+  --padding-bottom: 20px;
+  --padding-end: 20px;
+  --padding-start: 20px;
+}
 
 ion-toolbar { 
-    --background: #F1B634;
-    --color: white;
-  
-    --border-color: #000000;
-    --border-width: 4px 0;
-  
-    --min-height: 80px;
-    --padding-top: 10px;
-    --padding-bottom: 10px;
-  }
+  --background: #F1B634;
+  --color: white;
+
+  --border-color: #000000;
+  --border-width: 4px 0;
+
+  --min-height: 80px;
+  --padding-top: 10px;
+  --padding-bottom: 10px;
+}
 
 #logo {
-  display:inline;
+display:inline;
 }
 
 #parrafo {
-  display:inline;
-  font-size: 20px;
-  padding-left: 50px;
+display:inline;
+font-size: 20px;
+padding-left: 50px;
 }
 
 ion-content {
-  --background: none;
-  --background: url(/assets/background.webp) no-repeat center/cover fixed;
+--background: none;
+--background: url(/assets/background.webp) no-repeat center/cover fixed;
 }

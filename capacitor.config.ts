@@ -2,7 +2,7 @@ import { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
   appId: 'io.ionic.starter',
-  appName: 'AppMovil2',
+  appName: 'AppMovil',
   webDir: 'www',
   server: {
     androidScheme: 'https'
@@ -12,7 +12,7 @@ const config: CapacitorConfig = {
     CapacitorSQLite: {
     iosDatabaseLocation: 'Library/CapacitorDatabase',
     iosIsEncryption: false,
-    iosKeychainPrefix: 'AppMovil2',
+    iosKeychainPrefix: 'AppMovil',
     iosBiometric: {
         biometricAuth: false,
         biometricTitle : "Biometric login for capacitor sqlite"
