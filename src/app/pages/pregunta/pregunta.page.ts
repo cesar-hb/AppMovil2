@@ -38,7 +38,7 @@ export class PreguntaPage implements OnInit {
   volverIngreso(){
     this.router.navigate(['ingreso']);
   }
-
+// Generar a futuro un guard para eliminar vulnerabilidad de seguridad.
   async chequearRespuesta(){
     const usuario = await this.bd.leerUsuario(this.correo);
     if (usuario?.respuestaSecreta == this.respuesta) {
