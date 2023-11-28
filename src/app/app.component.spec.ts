@@ -22,32 +22,40 @@ describe('Probar arranque de la app',() => {
       schemas: [CUSTOM_ELEMENTS_SCHEMA],
     }).compileComponents();
   });
-  it('Se debería crear la aplicación.', () =>{
+
+  it('Se debería crear la aplicación', () =>{
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
     expect(app).toBeTruthy();
   });
-  /* it('Se debería crear la la componente foro', () =>{
+
+  it('Se debería crear la componente foro', () =>{
     const fixture = TestBed.createComponent(ForoComponent);
     const foroComponent = fixture.debugElement.componentInstance;
     expect(foroComponent).toBeTruthy();
   });
-  it('Se debería crear la la componente miclase', () =>{
+
+  it('Se debería crear la componente miclase', () =>{
     const fixture = TestBed.createComponent(MiclaseComponent);
     const miclaseComponent = fixture.debugElement.componentInstance;
     expect(miclaseComponent).toBeTruthy();
   });
-  it('Se debería crear la la componente misdatos', () =>{
+
+  it('Se debería crear la componente misdatos', () =>{
     const fixture = TestBed.createComponent(MisdatosComponent);
     const misdatosComponent = fixture.debugElement.componentInstance;
     expect(misdatosComponent).toBeTruthy();
   });
-  it('Se debería crear la la componente qr', () =>{
+
+  it('Se debería crear la componente qr', () =>{
     const fixture = TestBed.createComponent(QrComponent);
     const qrComponent = fixture.debugElement.componentInstance;
     expect(qrComponent).toBeTruthy();
   });
-}); */
+});
+
+ 
+
 
 describe('Probar clase usuario', () => {
   let usuario: Usuario;
@@ -59,7 +67,6 @@ describe('Probar clase usuario', () => {
   describe('Probar password', () => {
     
     it ('Probar que la contraseña no sea vacía', () => {
-
       usuario.password = '';
       expect(usuario.validarPassword(usuario.password)).toContain('debe tener un valor');
     });
@@ -72,6 +79,6 @@ describe('Probar clase usuario', () => {
 
   it ('Probar que correo sea @duoc.cl', () => {
     usuario.correo = 'atorres';
-    expect(usuario.validarCorreo(usuario.correo)).toContain('debe tener un valor');
+    expect(usuario.validarCorreo(usuario.correo)).toContain('debe terminar en @duoc.cl');
   });
 });
