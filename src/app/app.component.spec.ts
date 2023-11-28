@@ -54,8 +54,6 @@ describe('Probar arranque de la app',() => {
   });
 });
 
- 
-
 
 describe('Probar clase usuario', () => {
   let usuario: Usuario;
@@ -71,14 +69,17 @@ describe('Probar clase usuario', () => {
       expect(usuario.validarPassword(usuario.password)).toContain('debe tener un valor');
     });
     
-  });
-  it ('Probar que correo no esté vacío', () => {
-    usuario.correo = '';
-    expect(usuario.validarCorreo(usuario.correo)).toContain('debe tener un valor');
-  });
-
-  it ('Probar que correo sea @duoc.cl', () => {
-    usuario.correo = 'atorres';
-    expect(usuario.validarCorreo(usuario.correo)).toContain('debe terminar en @duoc.cl');
+    it ('Probar que correo no esté vacío', () => {
+      usuario.correo = '';
+      expect(usuario.validarCorreo(usuario.correo)).toContain('debe tener un valor');
+    });
+  
+    it ('Probar que correo sea @duoc.cl', () => {
+      usuario.correo = 'atorres';
+      expect(usuario.validarCorreo(usuario.correo)).toContain('debe terminar en @duoc.cl');
+    });
+    
   });
 });
+
+  

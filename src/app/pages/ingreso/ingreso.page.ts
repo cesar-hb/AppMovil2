@@ -34,4 +34,8 @@ export class IngresoPage implements OnInit {
     this.router.navigate(['correo']);
   }
 
+  crearUsuario(){
+    this.router.navigate(['crearcuenta']);
+  }
+
 }

@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-toolbar >
+    <ion-title #titulo>
+      <div>
+        <img id=logo src="/assets/duoc-logo-s.png" alt="image">
+        <p id=parrafo>Sistema de asistencia DUOC</p>
+      </div>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content [fullscreen]="true">
+  <div class="marco">
+
+    <ion-item>
+      <ion-input type="text" [(ngModel)]="usuario.correo" label="Correo" labelPlacement="floating"></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-input type="text" [(ngModel)]="usuario.nombre" label="Nombre" labelPlacement="floating"></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-input type="text" [(ngModel)]="usuario.apellido" label="Apellidos" labelPlacement="floating"></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-input type="text" [(ngModel)]="usuario.preguntaSecreta" label="Pregunta secreta" labelPlacement="floating"></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-input type="text" [(ngModel)]="usuario.respuestaSecreta" label="Respuesta secreta" labelPlacement="floating"></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-input type="password" [(ngModel)]="usuario.password" label="Contraseña" labelPlacement="floating"></ion-input>
+    </ion-item>
+
+    <div class="centrar-boton">
+      <ion-button (click)="crearUsuario()">
+        Crear nuevo usuario
+      </ion-button>
+    </div>
+  
+  </div>
+  </ion-content>
