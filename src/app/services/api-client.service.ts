@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { Publicacion } from '../model/publicacion';
 import { showToast } from '../tools/message-routines';
+import { Usuario } from '../model/usuario';
 
 @Injectable({
   providedIn: 'root'
@@ -33,6 +34,8 @@ export class ApiClientService {
       }
     });
   }
+
+
 
   crearPublicacion(publicacion: any): Observable<any> {
     return this.http.post(this.apiUrl + '/publicaciones/', publicacion, this.httpOptions);

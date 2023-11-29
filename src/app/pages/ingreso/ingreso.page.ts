@@ -16,7 +16,7 @@ import { Router } from '@angular/router';
 export class IngresoPage implements OnInit {
 
   correo = 'desarrollador@duocuc.cl';
-  password = '1234';
+  password = 'duoc123';
 
   constructor(private bd: DataBaseService, private authService: AuthService, private router: Router) { }
 

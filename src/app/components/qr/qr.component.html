@@ -18,7 +18,15 @@
   <canvas #canvas hidden></canvas>
 
   <ion-button *ngIf="usuario.correo == 'ADMIN'" (click)="listadoUsuarios()">
-    Registro usuarios
+    Listado usuarios
   </ion-button>
+
+  <ion-card *ngIf="usuario.correo == 'ADMIN'"></ion-card>
+  <ion-card-header *ngIf="usuario.correo == 'ADMIN'">
+    <h4>
+      Correo:  <br>
+      Nombre: 
+    </h4>
+  </ion-card-header>
 
 </ion-content>
