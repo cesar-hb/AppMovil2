@@ -17,4 +17,8 @@
   <video #video [hidden]="!escaneando" width="100%"></video>
   <canvas #canvas hidden></canvas>
 
+  <ion-button *ngIf="usuario.correo == 'ADMIN'" (click)="listadoUsuarios()">
+    Registro usuarios
+  </ion-button>
+
 </ion-content>

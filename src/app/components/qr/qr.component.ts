@@ -31,6 +31,7 @@ export class QrComponent  implements OnInit {
   usuario = new Usuario();
   public asistencia: Asistencia = new Asistencia();
   public escaneando = false;
+  public admin = false;
   public datosQR: string = '';
   public datosMiClase = new BehaviorSubject<Asistencia | null>(null);
   plataforma = 'web';
@@ -47,6 +48,17 @@ export class QrComponent  implements OnInit {
     this.authService.usuarioAutenticado.subscribe((usuario) => {
       this.usuario = usuario? usuario : new Usuario();
     });
+  }
+
+  /**
+   *  Lógica administrador de usuarios
+   */
+
+  listadoUsuarios(){
+    if (this.usuario.correo == 'ADMIN'){
+      this.admin = true;
+      showAlertDUOC('Eres admin');
+    }
   }
 
   async comenzarEscaneoQR() {
