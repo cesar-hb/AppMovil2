@@ -6,7 +6,7 @@
     </h1>
   </div>
 
-  <ion-button *ngIf="!escaneando" (click)="comenzarEscaneoQR()">
+  <ion-button *ngIf="!escaneando && usuario.correo != 'ADMIN'" (click)="comenzarEscaneoQR()">
     Comenzar Escaneo de QR
   </ion-button>
 
